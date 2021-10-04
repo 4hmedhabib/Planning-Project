@@ -1,12 +1,15 @@
 import { Route, Switch } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 function App() {
 	return (
 		<div className="App">
 			<Layout>
 				<Switch>
-					<h1>hell</h1>
+					<Route path="/" exact>
+						<Dashboard />
+					</Route>
 				</Switch>
 			</Layout>
 		</div>
