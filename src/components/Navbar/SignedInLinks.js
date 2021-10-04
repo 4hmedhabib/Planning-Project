@@ -1,8 +1,9 @@
+import { Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const SignedInLinks = () => {
 	return (
-		<ul className="right">
+		<Fragment>
 			<li>
 				<NavLink to="/projects/create">New Project</NavLink>
 			</li>
@@ -14,7 +15,7 @@ const SignedInLinks = () => {
 					NN
 				</NavLink>
 			</li>
-		</ul>
+		</Fragment>
 	);
 };
 

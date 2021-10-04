@@ -9,8 +9,10 @@ const Navbar = () => {
 				<Link to="/" className="brand-logo">
 					HabibPlan
 				</Link>
-				<SignedOutLinks />
-				<SignedInLinks />
+				<ul className="right">
+					<SignedOutLinks />
+					<SignedInLinks />
+				</ul>
 			</div>
 		</nav>
 	);
