@@ -3,6 +3,8 @@ import { useState } from 'react';
 const SignUp = () => {
 	const [ email, setEmail ] = useState('');
 	const [ password, setPassword ] = useState('');
+	const [ firstname, setFirstname ] = useState('');
+	const [ lastname, setLastname ] = useState('');
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -15,7 +17,7 @@ const SignUp = () => {
 				<div className="input-field">
 					<label htmlFor="email">Email</label>
 					<input
-						type="text"
+						type="email"
 						name="email"
 						id="email"
 						onChange={(e) => setEmail(e.target.value)}
@@ -31,6 +33,28 @@ const SignUp = () => {
 						id="password"
 						onChange={(e) => setPassword(e.target.value)}
 						value={password}
+						autocomplete="off"
+					/>
+				</div>
+				<div className="input-field">
+					<label htmlFor="firstname">First Name</label>
+					<input
+						type="text"
+						name="firstname"
+						id="firstname"
+						onChange={(e) => setFirstname(e.target.value)}
+						value={firstname}
+						autocomplete="off"
+					/>
+				</div>
+				<div className="input-field">
+					<label htmlFor="lastname">Last Name</label>
+					<input
+						type="text"
+						name="lastname"
+						id="lastname"
+						onChange={(e) => setLastname(e.target.value)}
+						value={lastname}
 						autocomplete="off"
 					/>
 				</div>
