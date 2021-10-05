@@ -5,7 +5,7 @@ const SignedOutLinks = () => {
 	return (
 		<Fragment>
 			<li>
-				<NavLink to="/login">Login</NavLink>
+				<NavLink to="/signin">Login</NavLink>
 			</li>
 			<li>
 				<NavLink to="/signup">Singup</NavLink>

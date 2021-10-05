@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const SignIn = () => {
+const SignUp = () => {
 	const [ email, setEmail ] = useState('');
 	const [ password, setPassword ] = useState('');
 
@@ -11,7 +11,7 @@ const SignIn = () => {
 	return (
 		<div className="container">
 			<form className="white" onSubmit={handleSubmit}>
-				<h5 className="grey-text text-darken-3 ">Sign In</h5>
+				<h5 className="grey-text text-darken-3 ">Sign up</h5>
 				<div className="input-field">
 					<label htmlFor="email">Email</label>
 					<input
@@ -20,6 +20,7 @@ const SignIn = () => {
 						id="email"
 						onChange={(e) => setEmail(e.target.value)}
 						email={email}
+						autocomplete="off"
 					/>
 				</div>
 				<div className="input-field">
@@ -30,14 +31,15 @@ const SignIn = () => {
 						id="password"
 						onChange={(e) => setPassword(e.target.value)}
 						value={password}
+						autocomplete="off"
 					/>
 				</div>
 				<div className="input-field">
-					<button className="btn pink lighten-1 z-depth-0">Login</button>
+					<button className="btn pink lighten-1 z-depth-0">Signup</button>
 				</div>
 			</form>
 		</div>
 	);
 };
 
-export default SignIn;
+export default SignUp;
