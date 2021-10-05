@@ -1,13 +1,20 @@
 import { useState } from 'react';
 
 const SignUp = () => {
-	const [ email, setEmail ] = useState('');
-	const [ password, setPassword ] = useState('');
-	const [ firstname, setFirstname ] = useState('');
-	const [ lastname, setLastname ] = useState('');
+	const [ value, setValue ] = useState({
+		email: '',
+		password: '',
+		firstname: '',
+		lastname: ''
+	});
+
+	const handleChange = (e) => {
+		setValue((prevState) => ({ ...prevState, [e.target.id]: e.target.value }));
+	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		console.log(value);
 	};
 
 	return (
@@ -20,8 +27,8 @@ const SignUp = () => {
 						type="email"
 						name="email"
 						id="email"
-						onChange={(e) => setEmail(e.target.value)}
-						email={email}
+						onChange={handleChange}
+						email={value.email}
 						autocomplete="off"
 					/>
 				</div>
@@ -31,8 +38,8 @@ const SignUp = () => {
 						type="password"
 						name="password"
 						id="password"
-						onChange={(e) => setPassword(e.target.value)}
-						value={password}
+						onChange={handleChange}
+						value={value.password}
 						autocomplete="off"
 					/>
 				</div>
@@ -42,8 +49,8 @@ const SignUp = () => {
 						type="text"
 						name="firstname"
 						id="firstname"
-						onChange={(e) => setFirstname(e.target.value)}
-						value={firstname}
+						onChange={handleChange}
+						value={value.firstname}
 						autocomplete="off"
 					/>
 				</div>
@@ -53,8 +60,8 @@ const SignUp = () => {
 						type="text"
 						name="lastname"
 						id="lastname"
-						onChange={(e) => setLastname(e.target.value)}
-						value={lastname}
+						onChange={handleChange}
+						value={value.lastname}
 						autocomplete="off"
 					/>
 				</div>
