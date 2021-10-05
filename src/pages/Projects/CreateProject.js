@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { connect } from 'react-redux';
 import { createProject } from '../../store/actions/projectActions';
 
-const CreateProject = () => {
+const CreateProject = (props) => {
 	const [ value, setValue ] = useState({
 		title: '',
 		content: ''
@@ -14,7 +14,7 @@ const CreateProject = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(value);
+		props.createPoject(value);
 	};
 
 	return (

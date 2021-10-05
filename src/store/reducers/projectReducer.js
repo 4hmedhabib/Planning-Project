@@ -7,6 +7,9 @@ const initState = {
 };
 
 const projectReducer = (state = initState, action) => {
+	if (action.type === 'CREATE-PROJECT') {
+		console.log('craeted project', action.project);
+	}
 	return state;
 };
 
