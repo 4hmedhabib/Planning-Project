@@ -1,9 +1,12 @@
+import { useParams } from 'react-router-dom';
+
 const ProjectDetails = () => {
+	const { id } = useParams();
 	return (
 		<div className="container section project-details">
 			<div className="card z-depth-0">
 				<div className="card-content">
-					<span className="card-title">Prject title</span>
+					<span className=" card-title ">Prject title - {id}</span>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia odit mollitia incidunt nulla
 						excepturi ut repellat earum dicta nisi. Perspiciatis, obcaecati! Neque eaque quaerat quisquam
