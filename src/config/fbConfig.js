@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/auth';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
+import 'firebase/compat/auth';
 
 const firebaseConfig = {
 	apiKey: 'AIzaSyDi1WI96TyqQ-24ph1U1-tKR9ZMy6vk-Ls',
