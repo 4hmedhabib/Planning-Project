@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: url(./img/mario-bg.png) no-repeat;
-  background-size: cover;
+  background-size: cover 100%;
 }
 
 form {
